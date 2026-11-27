@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Welcome to 209 Legacy – Plano</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://209salon.com/locations/legacy-plano/">
+<meta property="og:title" content="209 Salon Legacy – Plano">
+<meta property="og:description" content="7300 Lone Star Dr, Suite C138, Plano, TX 75024. Book online.">
+<meta name="theme-color" content="#2b211d">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#2b211d;color:#fbf8f4;font-family:Manrope,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.splash{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 24px calc(48px + env(safe-area-inset-bottom));position:relative;overflow:hidden}
+.art{position:absolute;inset:0;background:url("../images/art-hero.svg") center/cover;opacity:.2;transform:scale(1.08);animation:drift 3.2s ease-out forwards;-webkit-mask-image:linear-gradient(to bottom,transparent 0,transparent 22%,#000 55%);mask-image:linear-gradient(to bottom,transparent 0,transparent 22%,#000 55%)}
+.inner{position:relative;z-index:1;max-width:560px}
+.mark{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(5.5rem,24vw,9rem);line-height:.9;letter-spacing:-.02em;animation:rise .9s ease both}
+.word{font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#c9b3a6;margin-top:14px;animation:rise .9s .15s ease both}
+.studio{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(2.6rem,11vw,4.2rem);color:#ead2c6;margin-top:26px;animation:rise .9s .35s ease both}
+.addr{font-size:.95rem;color:#c9b3a6;margin-top:10px;animation:rise .9s .5s ease both}
+.bar{width:160px;height:2px;background:rgba(234,210,198,.2);margin:34px auto 0;overflow:hidden;border-radius:2px;animation:rise .9s .6s ease both}
+.bar i{display:block;height:100%;width:100%;background:#ead2c6;transform-origin:left;transform:scaleX(0);animation:fill 2.6s .4s linear forwards}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px;animation:rise .9s .7s ease both}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none}
+.btn-a{background:#a8664c;color:#fff} .btn-b{border:1px solid #c9b3a6;color:#fbf8f4}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes fill{to{transform:scaleX(1)}}
+@keyframes drift{to{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.bar i{transform:scaleX(1)}}
+</style>
+</head>
+<body>
+<main class="splash">
+  <div class="art" aria-hidden="true"></div>
+  <div class="inner">
+    <div class="mark">209</div>
+    <div class="word">Salon &amp; Extensions Studio</div>
+    <h1 class="studio">Legacy – Plano</h1>
+    <p class="addr">7300 Lone Star Dr, Suite C138<br>Plano, TX 75024</p>
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <div class="actions"><a class="btn btn-a" href="https://209salon4.phorest.me/book/" rel="noopener">Book at Legacy – Plano</a><a class="btn btn-b" href="../locations/legacy-plano/index.html" id="enter">Enter</a></div>
+  </div>
+</main>
+<script>
+(function () {
+  try { localStorage.setItem('209_studio', 'legacy-plano'); } catch (e) {}
+  var dest = document.getElementById('enter').getAttribute('href');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var t = setTimeout(function () { location.replace(dest); }, reduce ? 1200 : 3000);
+  document.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { clearTimeout(t); }); });
+})();
+</script>
+</body>
+</html>

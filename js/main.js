@@ -42,6 +42,22 @@
     items.forEach(function (el) { el.classList.add('in'); });
   }
 
+  // Remembered studio (set by a studio link like /mckinney/): every general
+  // "Book" link goes straight to that studio's booking, and the booking page
+  // lists it first.
+  var studio = null;
+  try { studio = localStorage.getItem('209_studio'); } catch (e) {}
+  if (studio && window.STUDIOS && STUDIOS[studio]) {
+    var s = STUDIOS[studio];
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (/(^|\/)book\/(index\.html)?$/.test(h)) {
+        a.setAttribute('href', s.book); a.setAttribute('rel', 'noopener');
+        if (/^Book Now$/i.test(a.textContent.trim())) a.textContent = 'Book ' + s.name;
+      }
+    });
+  }
+
   // Footer year
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
