@@ -390,3 +390,15 @@ div.todo, p.todo { padding: 14px 18px; display: block; }
   .loc-gallery.n2, .loc-gallery.n3 { grid-template-columns: 1fr; height: auto; }
   .loc-gallery img { aspect-ratio: 4 / 3; height: auto; }
 }
+
+/* Shop CCIX button (header) + home band */
+.btn-ccix { border: 1px solid var(--ink); color: var(--ink); background: transparent; }
+.btn-ccix:hover { background: var(--ink); color: var(--paper); }
+.nav .btn.btn-ccix { color: var(--ink); }
+.nav .btn.btn-ccix:hover { color: var(--paper); }
+@media (max-width: 960px) { .nav .btn.btn-ccix { margin-top: 18px; } .nav .btn.btn-ccix + .btn { margin-top: 10px; } }
+.ccix-split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+.ccix-bottles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.ccix-bottles img { width: 100%; border-radius: 14px; transition: transform .3s; }
+.ccix-bottles:hover img { transform: translateY(-4px); }
+@media (max-width: 860px) { .ccix-split { grid-template-columns: 1fr; } }
