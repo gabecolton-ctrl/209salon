@@ -387,6 +387,15 @@ div.todo, p.todo { padding: 14px 18px; display: block; }
   .loc-gallery img { aspect-ratio: 4 / 3; height: auto; }
 }
 
+/* CCIX product showcase (no store links) */
+.ccix-card img { width: calc(100% + 24px); max-width: none; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; margin: -12px -12px 4px; background: #f3ece4; }
+.ccix-card h3 { font-size: 1.45rem; }
+.ccix-split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+.ccix-bottles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.ccix-bottles img { width: 100%; border-radius: 14px; transition: transform .3s; }
+.ccix-bottles:hover img { transform: translateY(-4px); }
+@media (max-width: 860px) { .ccix-split { grid-template-columns: 1fr; } }
+
 /* ---------- 209 Assistant (chat) ---------- */
 .asst { position: fixed; right: 20px; bottom: 20px; z-index: 70; font-family: var(--sans); }
 .asst-fab {
