@@ -373,10 +373,6 @@ div.todo, p.todo { padding: 14px 18px; display: block; }
 .no-js .reveal { opacity: 1; transform: none; }
 .band-dark .step p { color: #cbbcb2; }
 
-/* CCIX product cards */
-.ccix-card img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; margin: -12px -12px 4px; width: calc(100% + 24px); max-width: none; background: #f3ece4; }
-.ccix-card h3 { font-size: 1.45rem; }
-
 /* drawn art in small cards: fit, don't crop */
 .service-card .photo.is-art { background-size: contain; background-repeat: no-repeat; background-image: var(--img); background-color: #f4ede5; }
 
@@ -390,18 +386,6 @@ div.todo, p.todo { padding: 14px 18px; display: block; }
   .loc-gallery.n2, .loc-gallery.n3 { grid-template-columns: 1fr; height: auto; }
   .loc-gallery img { aspect-ratio: 4 / 3; height: auto; }
 }
-
-/* Shop CCIX button (header) + home band */
-.btn-ccix { border: 1px solid var(--ink); color: var(--ink); background: transparent; }
-.btn-ccix:hover { background: var(--ink); color: var(--paper); }
-.nav .btn.btn-ccix { color: var(--ink); }
-.nav .btn.btn-ccix:hover { color: var(--paper); }
-@media (max-width: 960px) { .nav .btn.btn-ccix { margin-top: 18px; } .nav .btn.btn-ccix + .btn { margin-top: 10px; } }
-.ccix-split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
-.ccix-bottles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.ccix-bottles img { width: 100%; border-radius: 14px; transition: transform .3s; }
-.ccix-bottles:hover img { transform: translateY(-4px); }
-@media (max-width: 860px) { .ccix-split { grid-template-columns: 1fr; } }
 
 /* ---------- 209 Assistant (chat) ---------- */
 .asst { position: fixed; right: 20px; bottom: 20px; z-index: 70; font-family: var(--sans); }
